@@ -8,10 +8,12 @@ let port = 8080;
 let app = express();
 const compiler = webpack(config)
 
+/* eslint-disable no-console */
+
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
-})); 
+}));
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../src/index.html'));
