@@ -1,4 +1,5 @@
 # Test against this version of Node.js
+# This tells appveyor to test 
 environment:
   matrix:
   # node.js
